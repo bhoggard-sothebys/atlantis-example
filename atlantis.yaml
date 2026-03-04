@@ -1,0 +1,19 @@
+version: 3
+projects:
+  - name: dev
+    dir: dev
+    workflow: default
+  - name: staging
+    dir: staging
+    workflow: default
+  - name: prod
+    dir: prod
+    workflow: plan-only
+
+workflows:
+  plan-only:
+    plan:
+      steps:
+        - init
+        - plan
+    # No apply stage defined - apply commands will be rejected
