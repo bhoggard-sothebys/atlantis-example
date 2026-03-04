@@ -9,5 +9,6 @@ export ATLANTIST_GH_TEAM_ALLOWLIST=":plan,:policy_check,@sothebys/nobody:apply"
 
 atlantis server \
   --atlantis-url="https://956c-100-38-10-160.ngrok-free.app" \
-  --repo-allowlist="github.com/bhoggard-sothebys/atlantis-example"
+  --repo-allowlist="github.com/bhoggard-sothebys/atlantis-example" \
+  --repo-config="$(dirname "$0")/../repos.yaml"
 
