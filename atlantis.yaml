@@ -1,0 +1,12 @@
+version: 3
+projects:
+  - name: dev
+    dir: dev
+    workflow: default
+  - name: staging
+    dir: staging
+    workflow: default
+  - name: prod
+    dir: prod
+    workflow: default
+    apply_requirements: [approved]
