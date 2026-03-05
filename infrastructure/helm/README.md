@@ -4,8 +4,8 @@
 
 The following environment variables must be defined:
 
-- ATLANTIS_TOKEN
-- ATLANTIS_WEBHOOK_SECRET
+- ATLANTIS_TOKEN - a fine-grained GitHub token - details TBD
+- ATLANTIS_WEBHOOK_SECRET - see https://github.com/bhoggard-sothebys/atlantis-example/settings/hooks
 
 Then run
 
