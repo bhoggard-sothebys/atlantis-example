@@ -5,3 +5,4 @@
 #   See https://www.runatlantis.io/docs/custom-workflows.html#reference
 
 echo "Atlantis plan directory: ${DIR}"
+
