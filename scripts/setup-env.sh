@@ -4,5 +4,5 @@
 #   DIR - absolute path to the directory where Atlantis runs the plan
 #   See https://www.runatlantis.io/docs/custom-workflows.html#reference
 
-echo "Atlantis environment: ${REPO_REL_DIR}"
+echo "Atlantis environment: ${REPO_REL_DIR##*/}"
 

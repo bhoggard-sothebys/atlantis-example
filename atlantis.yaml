@@ -1,19 +1,18 @@
 version: 3
 projects:
-  - name: dev
-    dir: dev
-    workflow: custom
-  - name: staging
-    dir: staging
-    workflow: custom
-  - name: prod
-    dir: prod
-    workflow: custom
+  - name: auth0-settings-dev
+    dir: standalone/auth0/settings/dev
+    workflow: default
+  - name: auth0-settings-staging
+    dir: standalone/auth0/settings/staging
+    workflow: default
+  - name: auth0-settings-prod
+    dir: standalone/auth0/settings/prod
+    workflow: default
     apply_requirements: [approved]
 workflows:
   custom:
     plan:
       steps:
-        - run: ../scripts/print-plan-dir.sh
-        - init
+        - run: ../scripts/setup-env.sh
         - plan
