@@ -14,5 +14,5 @@ workflows:
   custom:
     plan:
       steps:
-        - run: ../scripts/setup-env.sh
+        - run: ../../../../scripts/setup-env.sh
         - plan
