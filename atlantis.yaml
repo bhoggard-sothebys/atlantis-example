@@ -14,6 +14,6 @@ workflows:
   custom:
     plan:
       steps:
-        - run: ${REPO_REL_DIR}/../scripts/print-plan-dir.sh
+        - run: ../scripts/print-plan-dir.sh
         - init
         - plan
