@@ -1,5 +1,18 @@
 orgAllowlist: "github.com/bhoggard-sothebys/atlantis-example"
 
+basicAuth:
+  username: fwKHRRdiz4RXsKenAR
+  password: u3GcCCsutRo3yVFEdx
+
+ingress:
+  enabled: true
+  ingressClassName: traefik
+  host: atlantis.lvh.me
+  path: /
+  pathType: Prefix
+
+disableApply: true
+
 repoConfig: |
   repos:
     - id: /.*/
