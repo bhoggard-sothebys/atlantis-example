@@ -15,5 +15,6 @@ workflows:
     plan:
       steps:
         - run: ../../../../scripts/setup-env.sh
+        - run: ../../../../scripts/verify-env.sh
         - init
         - plan

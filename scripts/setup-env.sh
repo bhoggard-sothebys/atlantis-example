@@ -1,8 +1,9 @@
 #!/bin/bash
-# Prints the directory Atlantis is using for the plan step.
-# Atlantis sets several environment variables during workflow steps:
-#   DIR - absolute path to the directory where Atlantis runs the plan
-#   See https://www.runatlantis.io/docs/custom-workflows.html#reference
+# Reads environment-specific secrets from the atlantis K8s secret
+# and exports them as environment variables for Terraform.
 
-echo "Atlantis environment: ${REPO_REL_DIR##*/}"
+ENV="${REPO_REL_DIR##*/}"
+echo "Atlantis environment: ${ENV}"
 
+AUTH0_CLIENT_ID=$(kubectl get secret atlantis -n default -o jsonpath="{.data.${ENV}-auth0-client-id}" | base64 -d)
+export AUTH0_CLIENT_ID
