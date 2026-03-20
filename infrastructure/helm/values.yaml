@@ -18,6 +18,7 @@ ingress:
   pathType: Prefix
 
 disableApply: true
+disableApplyAll: true
 
 environmentSecrets:
   - name: ATLANTIS_WEB_USERNAME
