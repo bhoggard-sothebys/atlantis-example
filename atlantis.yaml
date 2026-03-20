@@ -14,7 +14,12 @@ workflows:
   custom:
     plan:
       steps:
-        - run: ../../../../scripts/setup-env.sh
+        - env:
+            name: AUTH0_CLIENT_ID
+            command: ../../../../scripts/setup-env.sh AUTH0_CLIENT_ID
+        - env:
+            name: AUTH0_CLIENT_SECRET
+            command: ../../../../scripts/setup-env.sh AUTH0_CLIENT_SECRET
         - run: ../../../../scripts/verify-env.sh
         - init
         - plan
