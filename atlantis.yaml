@@ -20,6 +20,9 @@ workflows:
         - env:
             name: AUTH0_CLIENT_SECRET
             command: ../../../../scripts/setup-env.sh AUTH0_CLIENT_SECRET
+        - env:
+            name: AUTH0_DOMAIN
+            command: ../../../../scripts/setup-env.sh AUTH0_DOMAIN
         - run: ../../../../scripts/verify-env.sh
         - init
         - plan
