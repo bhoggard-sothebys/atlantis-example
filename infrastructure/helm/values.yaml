@@ -3,6 +3,7 @@ orgAllowlist: "github.com/bhoggard-sothebys/atlantis-example"
 environment:
   ATLANTIS_WEB_BASIC_AUTH: "true"
   ATLANTIS_GH_USER: bhoggard-sothebys
+  ATLANTIS_DISABLE_APPLY_ALL: "true"
   DEV_AUTH0_DOMAIN: sothelabs.auth0.com
   STAGING_AUTH0_DOMAIN: sothebys-stg.auth0.com
   PROD_AUTH0_DOMAIN: sothebys.auth0.com
@@ -17,8 +18,6 @@ ingress:
   path: /
   pathType: Prefix
 
-disableApply: true
-disableApplyAll: true
 
 environmentSecrets:
   - name: ATLANTIS_WEB_USERNAME
