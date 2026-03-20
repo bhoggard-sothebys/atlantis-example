@@ -27,4 +27,5 @@ workflows:
         - init
         - plan
     apply:
-      steps: []
+      steps:
+        - run: echo "Apply is disabled. Changes must be applied manually."
