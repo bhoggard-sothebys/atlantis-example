@@ -1,8 +1,8 @@
 orgAllowlist: "github.com/bhoggard-sothebys/atlantis-example"
 
-basicAuth:
-  username: fwKHRRdiz4RXsKenAR
-  password: u3GcCCsutRo3yVFEdx
+environment:
+  ATLANTIS_WEB_BASIC_AUTH: "true"
+  ATLANTIS_GH_USER: bhoggard-sothebys
 
 ingress:
   enabled: true
@@ -12,6 +12,36 @@ ingress:
   pathType: Prefix
 
 disableApply: true
+
+environmentSecrets:
+  - name: ATLANTIS_WEB_USERNAME
+    secretKeyRef:
+      name: atlantis
+      key: basic-auth-username
+  - name: ATLANTIS_WEB_PASSWORD
+    secretKeyRef:
+      name: atlantis
+      key: basic-auth-password
+  - name: ATLANTIS_GH_TOKEN
+    secretKeyRef:
+      name: atlantis
+      key: github-token
+  - name: ATLANTIS_GH_WEBHOOK_SECRET
+    secretKeyRef:
+      name: atlantis
+      key: github-secret
+  - name: DEV_AUTH0_CLIENT_ID
+    secretKeyRef:
+      name: atlantis
+      key: dev-auth0-client-id
+  - name: STAGING_AUTH0_CLIENT_ID
+    secretKeyRef:
+      name: atlantis
+      key: staging-auth0-client-id
+  - name: PROD_AUTH0_CLIENT_ID
+    secretKeyRef:
+      name: atlantis
+      key: prod-auth0-client-id
 
 repoConfig: |
   repos:
