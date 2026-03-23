@@ -14,18 +14,6 @@ workflows:
   custom:
     plan:
       steps:
-        - env:
-            name: AUTH0_CLIENT_ID
-            command: ../../../../scripts/setup-env.sh AUTH0_CLIENT_ID
-        - env:
-            name: AUTH0_CLIENT_SECRET
-            command: ../../../../scripts/setup-env.sh AUTH0_CLIENT_SECRET
-        - env:
-            name: AUTH0_DOMAIN
-            command: ../../../../scripts/setup-env.sh AUTH0_DOMAIN
-        - run: ../../../../scripts/verify-env.sh
+        - run: ../scripts/setup-env.sh
         - init
         - plan
-    apply:
-      steps:
-        - run: echo "Apply is disabled. Changes must be applied manually."
