@@ -6,7 +6,7 @@ projects:
   - name: staging
     dir: staging
     workflow: custom
-  - name: staging
+  - name: prod
     dir: prod
     workflow: custom
     apply_requirements: [approved]
