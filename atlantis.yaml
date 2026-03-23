@@ -1,13 +1,13 @@
 version: 3
 projects:
-  - name: auth0-settings-dev
-    dir: standalone/auth0/settings/dev
+  - name: dev
+    dir: dev
     workflow: custom
-  - name: auth0-settings-staging
-    dir: standalone/auth0/settings/staging
+  - name: staging
+    dir: staging
     workflow: custom
-  - name: auth0-settings-prod
-    dir: standalone/auth0/settings/prod
+  - name: staging
+    dir: prod
     workflow: custom
     apply_requirements: [approved]
 workflows:
