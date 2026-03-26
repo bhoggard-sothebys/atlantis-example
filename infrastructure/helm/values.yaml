@@ -52,3 +52,4 @@ repoConfig: |
     - id: /.*/
       allowed_overrides: [workflow, apply_requirements]
       allow_custom_workflows: true
+      repo_config_file: standalone/auth0/atlantis.yaml
