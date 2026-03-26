@@ -1,13 +1,13 @@
 version: 3
 projects:
   - name: dev
-    dir: dev
+    dir: standalone/auth0/dev
     workflow: custom
   - name: staging
-    dir: staging
+    dir: standalone/auth0/staging
     workflow: custom
   - name: prod
-    dir: prod
+    dir: standalone/auth0/prod
     workflow: custom
     apply_requirements: [approved]
 workflows:
